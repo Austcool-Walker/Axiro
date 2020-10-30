@@ -50,7 +50,7 @@ class Admin(commands.Cog, command_attrs=dict(hidden=True), name="Admin"):
     @commands.is_owner()
     async def ls(self, ctx, path: str):
         '''Lists Files from path on Hard Drive'''
-            await ctx.send(os.listdir(path))
+        await ctx.send(os.listdir(path))
         await ctx.send('✅ list of files in **`{}`**'.format(path))
 
     @commands.command(hidden=True)
